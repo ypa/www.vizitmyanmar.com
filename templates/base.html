@@ -1,0 +1,211 @@
+<!doctype html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="author" content="cuongv">
+	<meta name="robots" content="index, follow">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			
+	<!-- CSS styles -->
+	<link rel='stylesheet' type='text/css' href='{{ STATIC_URL }}/css/bootstrap.min.css'>
+	<link rel='stylesheet' type='text/css' href='{{ STATIC_URL }}/css/bootstrap-responsive.min.css'>
+	<link rel='stylesheet' type='text/css' href='{{ STATIC_URL }}/css/main.css'>
+	<link rel="shortcut icon" href="{{ STATIC_URL }}/favicon.ico"> 
+	<!-- JS Libs -->
+	{% block scripts %}
+	<script src="{{ STATIC_URL }}/js/jquery.js"></script>
+	<script src="{{ STATIC_URL }}/js/bootstrap.min.js"></script>
+
+	{% endblock %}
+
+
+	{% block header %}
+	<title>Home | ViZit Myanmar</title>
+	{% endblock %}
+
+</head>
+<body>
+
+	<div class="container-fluid" id="top-bar">
+		<div class="row-fluid">
+			<div class="span12">
+				<a class="brand pull-left" href="{{ ROOT_URL }}/index.html"><img src="{{ STATIC_URL }}/img/logo.png" alt="e-Classifieds" title="e-Classifieds"></a>
+				<ul class="nav nav-pills pull-right">
+					<li class="phone"><img src="{{ STATIC_URL }}/img/phone.png" alt="" /></li>
+					<li><a href="#"><i class="icon-user icon-white"></i> Sign In</a></li>
+					<li><a href="#"><i class="icon-edit icon-white"></i> Create your profile</a></li>
+				</ul>									
+			</div>
+		</div>
+	</div>
+
+
+	<div class="navbar">
+		<div class="navbar-inner main-menu">
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>						
+					<div class="nav-collapse collapse">							 		                 
+						<ul class="nav" id="main-nav">				{% block main-nav %}	
+							<li class="active"><a href="{{ ROOT_URL }}/index.html">Home</a></li>
+							<li><a href="{{ ROOT_URL }}/listings.html">Listings</a></li>						
+							<li><a href="{{ ROOT_URL }}/classifieds.html">Classifieds</a></li>								
+							<li><a href="{{ ROOT_URL }}/deals.html">Deals</a></li>
+							<li><a href="#">Articles</a></li>								
+							<li><a href="#">Blog</a></li>								
+							<li><a href="#">Contact Us</a></li>	
+						{% endblock %}					
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>	
+
+
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span9">	
+				<div class="main_content">		
+					{% block content %}
+					Main content
+					{% endblock %}
+				</div>
+			</div>
+			<div class="span3">
+				<h3 class="title nm">BROWSE BY CATEGORY</h3>
+				<div class="accordion right-col" id="accordion">
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+								<h3 class="title nm nl">Listings</h3>
+							</a>
+						</div>
+						<div id="collapseOne" class="accordion-body collapse in">
+							<div class="accordion-inner">
+								<ul class="nav nav-list">
+									<li><a href="view_all.html">» Auto</a><span>(35)</span></li>
+									<li><a href="view_all.html">» Beauty and Fitness</a><span>(4419)</span></li>
+									<li><a href="view_all.html">» Entertainment</a><span>(13082)</span></li>
+									<li><a href="view_all.html">» Food and Dining</a><span>(4998)</span></li>
+									<li><a href="view_all.html">» Gifts and Flowers</a><span>(8106)</span></li>
+									<li><a href="view_all.html">» Health</a><span>(24)</span></li>
+									<li><a href="view_all.html">» Lawyer</a><span>(5)</span></li>
+									<li><a href="view_all.html">» Real Estate</a><span>(1)</span></li>
+									<li><a href="view_all.html">» Sports</a><span>(2022)</span></li>
+									<li><a href="view_all.html">» Travel</a><span>(3204)</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+								<h3 class="title nl nm">Classifieds</h3>
+							</a>
+						</div>
+						<div id="collapseTwo" class="accordion-body collapse">
+							<div class="accordion-inner">
+								<ul class="nav nav-list right-categories">										
+									<li><a href="view_all.html">» Food and Dining</a><span>(4998)</span></li>
+									<li><a href="view_all.html">» Gifts and Flowers</a><span>(8106)</span></li>
+									<li><a href="view_all.html">» Health</a><span>(24)</span></li>
+									<li><a href="view_all.html">» Lawyer</a><span>(5)</span></li>
+									<li><a href="view_all.html">» Real Estate</a><span>(1)</span></li>
+									<li><a href="view_all.html">» Sports</a><span>(2022)</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+								<h3 class="title nl nm">Deals</h3>
+							</a>
+						</div>
+						<div id="collapseThree" class="accordion-body collapse">
+							<div class="accordion-inner">
+								<ul class="nav nav-list right-categories">																				
+									<li><a href="view_all.html">» Gifts and Flowers</a><span>(8106)</span></li>
+									<li><a href="view_all.html">» Health</a><span>(24)</span></li>
+									<li><a href="view_all.html">» Lawyer</a><span>(5)</span></li>
+									<li><a href="view_all.html">» Real Estate</a><span>(1)</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>				
+				<h3 class="title nmb">RANDOM ITEMS</h3>
+				 <div id="myCarousel" class="carousel slide home">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img alt="" src="{{ STATIC_URL }}/img/products/sitemgr_photo_360.jpg" />
+                            <div class="carousel-caption">									
+                                <h4>Save 30%</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                            </div>
+                        </div>
+						<div class="item">
+                            <img alt="" src="{{ STATIC_URL }}/img/products/sitemgr_photo_2627.jpg" />
+                            <div class="carousel-caption">
+                                <h4>Save 12%</h4>
+                                <p>Sed ut perspiciatis unde omnis iste.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+                </div>
+				
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container-fluid footer">			
+		<div class="row-fluid">					
+			 <div class="span3">   
+				<h4 class="">Information</h4>
+				<ul>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Delivery Information</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Terms &amp; Conditions</a></li>
+				</ul>
+			</div>
+			<div class="span3">
+				<h4>My Account</h4>
+				<ul>
+					<li><a href="#">My Account</a></li>
+					<li><a href="#">Order History</a></li>
+					<li><a href="#">Wish List</a></li>
+					<li><a href="#">Newsletter</a></li>
+				</ul>
+			</div>
+			<div class="span3">
+				<h4>Connect with us</h4>
+				<a href="#"><img src="{{ STATIC_URL }}/img/social-facebook.png" alt="Facebook" /></a>
+				<a href="#"><img src="{{ STATIC_URL }}/img/social-twitter.png" alt="Twitter" /></a>
+				<a href="#"><img src="{{ STATIC_URL }}/img/social-rss.png" alt="RSS" /></a>
+				<a href="#"><img src="{{ STATIC_URL }}/img/social-flickr.png" alt="Flickr" /></a>
+			</div>
+			<div class="span3">
+				<div class="company_info">
+					<h4>Myanmar Express</h4>
+					<p>
+						148 Pyi Road<br/>
+						Tel: +95 1513664
+					</p>
+				</div>
+			</div>					
+		</div>	
+	</div>
+
+
+</body>
+</html>

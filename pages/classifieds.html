@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block header %}
+<title>Classifieds | Myanmar Express</title>
+{% endblock %}
+
+{% block main-nav %}	
+	<li><a href="{{ ROOT_URL }}/index.html">Home</a></li>
+	<li><a href="{{ ROOT_URL }}/listings.html">Listings</a></li>						
+	<li class="active"><a href="{{ ROOT_URL }}/classifieds.html">Classifieds</a></li>								
+	<li><a href="{{ ROOT_URL }}/deals.html">Deals</a></li>
+	<li><a href="#">Articles</a></li>								
+	<li><a href="#">Blog</a></li>								
+	<li><a href="#">Contact Us</a></li>	
+{% endblock %}	
+
+{% block content %}
+					
+<h3 class="title"><span class="pull-left">CLASSIFIED LISTINGS</span></h3>
+<div class="row-fluid">
+	<div class="span7">
+		
+		{% for hotel in classified_hotels %}
+			<div class="featured-item">
+				<a href="{{ ROOT_URL }}/{{ hotel.path }}"><img src="{{ STATIC_URL }}/img/hotels/{{ hotel.title_flatten }}/thumb.jpg" alt="{{ hotel.title }}" title="{{ hotel.title }}" class="img pull-left"></a>
+				<strong><a href="{{ ROOT_URL }}/{{ hotel.path }}">{{ hotel.title }}</a> <span class="label label-important">{{ hotel.special_tag }}</span></strong>
+				<p>Published: 05/12/2010 by <a href="#" target="_blank"> Olivia Matthew</a> in <a href="#">Travel</a></p>
+				<p>This is example text for the overview section. This is my boss, Jonathan Hart, a self-made millionaire, he's quite a guy</p>
+			</div>
+		{% endfor %}
+
+
+	</div>
+	<div class="span5">
+		<div class="other_info">
+			<p>
+				<strong><a href="detail.html">Fly Airlines</a></strong>
+				<br>in <a href="view_all.html">Life Style</a> - 01/01/2010					
+			</p>							
+			<p>
+				<strong><a href="detail.html">The Coffee Connection</a></strong>						
+				<br>in <a href="view_all.html">Food and Dining</a> - 12/26/2009					
+			</p>						
+			<p>
+				<strong><a href="detail.html">Dental Care Clinic</a></strong>							
+				<br>in <a href="view_all.html">Fitness</a> - 12/21/2009					
+			</p>						
+			<p>
+				<strong><a href="detail.html">Espresso</a></strong>
+				<br>in <a href="view_all.html"> Gifts and Flowers</a> - 07/04/2009
+			</p>
+		</div>
+	</div>
+</div>
+
+
+
+<h3 class="title"><span class="pull-left">BROWSE BY CATEGORY</span></h3>
+<div class="row-fluid">
+	<div class="span3"><a href="view_all.html">» Auto</a><span>(35)</span></div>
+	<div class="span3"><a href="view_all.html">» Beauty and Fitness</a><span>(4419)</span></div>
+	<div class="span3"><a href="view_all.html">» Entertainment</a><span>(13082)</span></div>
+	<div class="span3"><a href="view_all.html">» Food and Dining</a><span>(4998)</span></div>
+</div>
+<div class="row-fluid">
+	<div class="span3"><a href="view_all.html">» Gifts and Flowers</a><span>(8106)</span></div>
+	<div class="span3"><a href="view_all.html">» Health</a><span>(24)</span></div>
+	<div class="span3"><a href="view_all.html">» Lawyer</a><span>(5)</span></div>
+	<div class="span3"><a href="view_all.html">» Real Estate</a><span>(1)</span></div>
+</div>
+<div class="row-fluid">
+	<div class="span3"><a href="view_all.html">» Sports</a><span>(2022)</span></div>
+	<div class="span3"><a href="view_all.html">» Travel</a><span>(3204)</span></div>
+</div>
+
+{% endblock %}
+
