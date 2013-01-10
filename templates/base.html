@@ -30,12 +30,7 @@
 	<div class="container-fluid" id="top-bar">
 		<div class="row-fluid">
 			<div class="span12">
-				<a class="brand pull-left" href="{{ ROOT_URL }}/index.html"><img src="{{ STATIC_URL }}/img/logo.png" alt="e-Classifieds" title="e-Classifieds"></a>
-				<ul class="nav nav-pills pull-right">
-					<li class="phone"><img src="{{ STATIC_URL }}/img/phone.png" alt="" /></li>
-					<li><a href="#"><i class="icon-user icon-white"></i> Sign In</a></li>
-					<li><a href="#"><i class="icon-edit icon-white"></i> Create your profile</a></li>
-				</ul>									
+				<a class="brand pull-left" href="{{ ROOT_URL }}/index.html"><img src="{{ STATIC_URL }}/img/logo.png" alt="e-Classifieds" title="e-Classifieds"></a>								
 			</div>
 		</div>
 	</div>
@@ -51,13 +46,12 @@
 						<span class="icon-bar"></span>
 					</a>						
 					<div class="nav-collapse collapse">							 		                 
-						<ul class="nav" id="main-nav">				{% block main-nav %}	
+						<ul class="nav" id="main-nav">				
+						{% block main-nav %}	
 							<li class="active"><a href="{{ ROOT_URL }}/index.html">Home</a></li>
 							<li><a href="{{ ROOT_URL }}/listings.html">Listings</a></li>						
-							<li><a href="{{ ROOT_URL }}/classifieds.html">Classifieds</a></li>								
-							<li><a href="{{ ROOT_URL }}/deals.html">Deals</a></li>
-							<li><a href="#">Articles</a></li>								
-							<li><a href="#">Blog</a></li>								
+							<li><a href="{{ ROOT_URL }}/classifieds.html">Classifieds</a></li>						
+							<li><a href="{{ ROOT_URL }}/blog.html">Blog</a></li>								
 							<li><a href="#">Contact Us</a></li>	
 						{% endblock %}					
 						</ul>
