@@ -9,7 +9,7 @@
 	<li><a href="{{ ROOT_URL }}/listings.html">Listings</a></li>						
 	<li class="active"><a href="{{ ROOT_URL }}/classifieds.html">Classifieds</a></li>								
 	<li><a href="{{ ROOT_URL }}/blog.html">Blog</a></li>								
-	<li><a href="#">Contact Us</a></li>	
+	<li><a href="{{ ROOT_URL }}/contact.html">Contact Us</a></li>	
 {% endblock %}	
 
 {% block content %}
@@ -17,7 +17,12 @@
 <h3 class="title"><span class="pull-left">CLASSIFIED LISTINGS</span></h3>
 <div class="row-fluid">
 	<div class="span7">
-		
+		<div class="featured-item">
+			<a href="{{ ROOT_URL }}/{{ featured_item.path }}"><img src="{{ STATIC_URL }}/img/hotels/{{ featured_item.title_flatten }}/thumb.jpg" alt="{{ featured_item.title }}" title="{{ featured_item.title }}" class="img pull-left"></a>
+			<strong><a href="{{ ROOT_URL }}/{{ featured_item.path }}">{{ featured_item.title }}</a> <span class="label label-important">{{ hotel.special_tag }}</span></strong>
+			<p>Published: 05/12/2010 by <a href="#" target="_blank"> Olivia Matthew</a> in <a href="#">Travel</a></p>
+			<p>This is example text for the overview section. This is my boss, Jonathan Hart, a self-made millionaire, he's quite a guy</p>
+		</div>
 		{% for hotel in classified_hotels %}
 			<div class="featured-item">
 				<a href="{{ ROOT_URL }}/{{ hotel.path }}"><img src="{{ STATIC_URL }}/img/hotels/{{ hotel.title_flatten }}/thumb.jpg" alt="{{ hotel.title }}" title="{{ hotel.title }}" class="img pull-left"></a>
