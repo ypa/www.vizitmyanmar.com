@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import url("http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold");
+@import url("http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold");
 body{	
 	color: #666;
 	background-color:#f8f8f8;
@@ -296,4 +297,48 @@ ul.social li{
 	overflow:hidden;
 	padding:5px;
 	margin-bottom:20px;
+}
+.blog-post .wrapper-img {
+    padding: 15px 15px 0 15px;
+}
+
+.blog-post .wrapper .text {
+	padding: 0 15px 0 15px;
+}
+.blog-post .wrapper-img img {
+    margin-bottom: 0;
+}
+.blog-post .wrapper-img .video {
+    margin-bottom: 0;
+}
+.video iframe,
+.video object,
+.video embed {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 350px;
+}
+
+.blog-post .post-title {
+	padding: 0 0 0 15px;
+}
+
+.blog-post {
+	margin-top:20px;
+	margin-bottom:20px;
+	border-bottom: 1px solid #EEE;
+	padding-bottom: 5px;
+}
+
+.blog-post .text {
+	font-family: 'PT Serif';	
+	font-size:12pt;
+	line-height: 23px;
+	margin-top:10px;
+	margin-bottom: 15px;
+}
+.other_info {
+	margin-top:20px;
 }
