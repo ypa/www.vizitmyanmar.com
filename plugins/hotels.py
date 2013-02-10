@@ -7,10 +7,10 @@ HOTELS_PATH = 'hotels/'
 HOTELS = []
 FEATURED_HOTEL_NAMES = ['Inya Lake Hotel', 'Savoy Hotel', 'Sedona Hotel', 'Strand Hotel']
 FEATURED_HOTELS = []
-CLASSIFIED_HOTEL_NAMES = ['Summit Park View Hotel', 'Traders Hotel', 'Park Royal Hotel', 'Chatrium Hotel']
+CLASSIFIED_HOTEL_NAMES = ['Summit Park View Hotel', 'Traders Hotel', 'Park Royal Hotel', 'Kandawgyi Palace Hotel']
 CLASSIFIED_HOTELS = []
 
-FEATURED_ITEM_TITLE = 'Kandawgyi Palace Hotel'
+FEATURED_ITEM_TITLE = 'Myanmar Life Hotel'
 
 from django.template import Context
 from django.template.loader import get_template

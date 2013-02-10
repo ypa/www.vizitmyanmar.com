@@ -1,0 +1,10 @@
+main.jpg dimension
+400x256 pixels
+$ gm mogrify -resize 400x256! main.jpg
+
+thumb.jpg dimension
+151x86 pixels
+$ gm mogrify -resize 151x86! thumb.jpg
+
+And then you need 1.jpg 2.jpg and 3.jpg of any size(for now)
+
