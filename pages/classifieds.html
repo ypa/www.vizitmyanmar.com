@@ -15,54 +15,38 @@ Z{% extends "base.html" %}
 {% block content %}
 <h3 class="title"><span class="pull-left">CLASSIFIED LISTINGS</span></h3>
 <div class="row-fluid">
-	<div class="span7">
 		<div class="featured-item">
-			<a href="{{ ROOT_URL }}/{{ featured_item.path }}"><img src="{{ STATIC_URL }}/img/hotels/{{ featured_item.title_flatten }}/thumb.jpg" alt="{{ featured_item.title }}" title="{{ featured_item.title }}" class="img pull-left"></a>
-			<strong>
-				<a href="{{ ROOT_URL }}/{{ featured_item.path }}">{{ featured_item.title }}</a>
-				{% if featured_item.special_tag %}
-					<span class="label label-important">{{ featured_item.special_tag }}</span>
-				{% endif %}
-			</strong>
-			<p>Published: 05/12/2010 by <a href="#" target="_blank"> Olivia Matthew</a> in <a href="#">Travel</a></p>
-			<p>This is example text for the overview section. This is my boss, Jonathan Hart, a self-made millionaire, he's quite a guy</p>
-		</div>
-		{% for hotel in classified_hotels %}
-			<div class="featured-item">
-				<a href="{{ ROOT_URL }}/{{ hotel.path }}"><img src="{{ STATIC_URL }}/img/hotels/{{ hotel.title_flatten }}/thumb.jpg" alt="{{ hotel.title }}" title="{{ hotel.title }}" class="img pull-left"></a>
+			<div class="span3">
+				<a href="{{ ROOT_URL }}/{{ featured_item.path }}"><img src="{{ STATIC_URL }}/img/hotels/{{ featured_item.title_flatten }}/thumb.jpg" alt="{{ featured_item.title }}" title="{{ featured_item.title }}" class="img pull-left"></a>
+			</div>
+			<div class="span7">
 				<strong>
-					<a href="{{ ROOT_URL }}/{{ hotel.path }}">{{ hotel.title }}</a>
-					{% if hotel.special_tag %}
-						<span class="label label-important">{{ hotel.special_tag }}</span>
+					<a href="{{ ROOT_URL }}/{{ featured_item.path }}">{{ featured_item.title }}</a>
+					{% if featured_item.special_tag %}
+						<span class="label label-important">{{ featured_item.special_tag }}</span>
 					{% endif %}
 				</strong>
 				<p>Published: 05/12/2010 by <a href="#" target="_blank"> Olivia Matthew</a> in <a href="#">Travel</a></p>
-				<p>This is example text for the overview section. This is my boss, Jonathan Hart, a self-made millionaire, he's quite a guy</p>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			</div>
+		</div>
+		{% for hotel in classified_hotels %}
+			<div class="featured-item">
+				<div class="span3">
+					<a href="{{ ROOT_URL }}/{{ hotel.path }}"><img src="{{ STATIC_URL }}/img/hotels/{{ hotel.title_flatten }}/thumb.jpg" alt="{{ hotel.title }}" title="{{ hotel.title }}" class="img pull-left"></a>
+				</div>
+				<div class="span7">
+					<strong>
+						<a href="{{ ROOT_URL }}/{{ hotel.path }}">{{ hotel.title }}</a>
+						{% if hotel.special_tag %}
+							<span class="label label-important">{{ hotel.special_tag }}</span>
+						{% endif %}
+					</strong>
+					<p>Published: 05/12/2010 by <a href="#" target="_blank"> Olivia Matthew</a> in <a href="#">Travel</a></p>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+				</div>
 			</div>
 		{% endfor %}
-
-
-	</div>
-	<div class="span5">
-		<div class="other_info">
-			<p>
-				<strong><a href="detail.html">Fly Airlines</a></strong>
-				<br>in <a href="view_all.html">Life Style</a> - 01/01/2010
-			</p>
-			<p>
-				<strong><a href="detail.html">The Coffee Connection</a></strong>
-				<br>in <a href="view_all.html">Food and Dining</a> - 12/26/2009
-			</p>
-			<p>
-				<strong><a href="detail.html">Dental Care Clinic</a></strong>
-				<br>in <a href="view_all.html">Fitness</a> - 12/21/2009
-			</p>
-			<p>
-				<strong><a href="detail.html">Espresso</a></strong>
-				<br>in <a href="view_all.html"> Gifts and Flowers</a> - 07/04/2009
-			</p>
-		</div>
-	</div>
 </div>
 
 

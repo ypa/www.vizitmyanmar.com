@@ -333,7 +333,7 @@ ul.social li{
 }
 
 .blog-post .text {
-	font-family: 'PT Serif';	
+	font-family: 'PT Serif';
 	font-size:12pt;
 	line-height: 23px;
 	margin-top:10px;
@@ -341,4 +341,9 @@ ul.social li{
 }
 .other_info {
 	margin-top:20px;
+}
+
+.blog-content {
+	width: 670px;
+	margin: 0px auto;
 }
