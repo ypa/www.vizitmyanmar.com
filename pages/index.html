@@ -19,31 +19,31 @@
 	</div>
 </div>
 <h3 class="title"><span class="pull-left">FEATURED HOTEL</span></h3>
-<div class="row-fluid">
-	<div class="span7">
-		<div class="featured-item">
-			<div class="pull-left deal-tag-info">
-				<div class="deal-tag">$54</div>
-				<div class="deal-discount">55% OFF</div>
-			</div>
-			<div id="main" class="pull-left">
-				<a href="{{ ROOT_URL }}/{{ featured_item.path }}"><img src="{{ STATIC_URL }}/img/hotels/{{ featured_item.title_flatten }}/main.jpg" alt="" title="{{ featured_item.title }}" class="img deal-featured"></a>
-				<p><strong><a href="{{ ROOT_URL }}/{{ featured_item.path }}" title="{{ featured_item.title  }}">55% off - {{ featured_item.title }} </a></strong>
-				</p>
-			</div>
-			<div id="thumbs" class="span3">
-				<a class="thumbnail">
-					<img alt="" src="{{ STATIC_URL }}/img/hotels/{{ featured_item.title_flatten }}/1.jpg">
-				</a>
-				<a class="thumbnail">
-					<img alt="" src="{{ STATIC_URL }}/img/hotels/{{ featured_item.title_flatten }}/2.jpg">
-				</a><a class="thumbnail">
-					<img alt="" src="{{ STATIC_URL }}/img/hotels/{{ featured_item.title_flatten }}/3.jpg">
-				</a>
-			</div>
-		</div>
+<div class="container-fluid">
+	<div class="featured-item">
+	<div class="pull-left deal-tag-info span1">
+			<div class="deal-tag">$54</div>
+			<div class="deal-discount">55% OFF</div>
 	</div>
 	<div class="span5">
+		<div id="main" class="pull-left">
+			<a href="{{ ROOT_URL }}/{{ featured_item.path }}"><img src="{{ STATIC_URL }}/img/hotels/{{ featured_item.title_flatten }}/main.jpg" alt="" title="{{ featured_item.title }}" class="img deal-featured"></a>
+			<p><strong><a href="{{ ROOT_URL }}/{{ featured_item.path }}" title="{{ featured_item.title  }}">55% off - {{ featured_item.title }} </a></strong>
+			</p>
+		</div>
+
+	</div>
+		<div id="thumbs" class="span2">
+		<a class="thumbnail">
+			<img alt="" src="{{ STATIC_URL }}/img/hotels/{{ featured_item.title_flatten }}/1.jpg">
+		</a>
+		<a class="thumbnail">
+			<img alt="" src="{{ STATIC_URL }}/img/hotels/{{ featured_item.title_flatten }}/2.jpg">
+		</a><a class="thumbnail">
+			<img alt="" src="{{ STATIC_URL }}/img/hotels/{{ featured_item.title_flatten }}/3.jpg">
+		</a>
+		</div>
+	<div class="span3">
 		<div class="other_info">
 			<div class="item">
 				<div class="deal-tag">$70</div>
@@ -67,6 +67,7 @@
 			</div>
 		</div>
 	</div>
+	</div>
 </div>
 
 <h3 class="title"><span class="pull-left">CLASSIFIED HOTELS</span><span class="pull-right"><a href="{{ ROOT_URL }}/classifieds.html">View all classifieds</a></span></h3>
@@ -86,5 +87,5 @@
 </div>
 
 
-<script src="{{ STATIC_URL }}/js/custom.js"></script>		
+<script src="{{ STATIC_URL }}/js/custom.js"></script>
 {% endblock %}
