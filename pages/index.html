@@ -20,13 +20,9 @@
 </div>
 <h3 class="title"><span class="pull-left">FEATURED HOTEL</span></h3>
 <div class="container-fluid">
-	<div class="featured-item">
-		<div class="pull-left deal-tag-info span1">
-				<div class="deal-tag">$54</div>
-				<div class="deal-discount">55% OFF</div>
-		</div>
-		<div class="span5">
-			<div id="main" class="pull-left">
+	<div class="row-fluid">
+		<div class="span6">
+			<div id="main">
 				<a href="{{ ROOT_URL }}/{{ featured_item.path }}"><img src="{{ STATIC_URL }}/img/hotels/{{ featured_item.title_flatten }}/main.jpg" alt="" title="{{ featured_item.title }}" class="img deal-featured"></a>
 				<p><strong><a href="{{ ROOT_URL }}/{{ featured_item.path }}" title="{{ featured_item.title  }}">55% off - {{ featured_item.title }} </a></strong>
 				</p>
@@ -42,7 +38,7 @@
 				<img alt="" src="{{ STATIC_URL }}/img/hotels/{{ featured_item.title_flatten }}/3.jpg">
 			</a>
 		</div>
-		<div class="span3">
+		<div class="span4">
 			<div class="other_info">
 				<div class="item">
 					<div class="deal-tag">$70</div>
