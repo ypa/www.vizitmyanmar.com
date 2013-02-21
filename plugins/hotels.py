@@ -31,20 +31,20 @@ def getNode(template, context=Context(), name='subject'):
 
 
 def preBuild(site):
-	
+
 	global HOTELS
 	global FEATURED_HOTELS
 	global FEATURED_ITEM
 	global CLASSIFIED_HOTELS
-	
+
 	# Build all the posts
 	for page in site.pages():
 		if page.path.startswith(HOTELS_PATH):
-			
+
 			# Skip non html posts for obious reasons
 			if not page.path.endswith('.html'):
 				continue
-			
+
 			# Find a specific defined variable in the page context,
 			# and throw a warning if we're missing it.
 			def find(name):
@@ -53,14 +53,22 @@ def preBuild(site):
 					logging.info("Missing info '%s' for hotel %s" % (name, page.path))
 					return ''
 				return c.get(name, '')
-			
+
 			# Build a context for each hotel
 			hotelContext = {}
 			hotelContext['title'] = find('title')
 			hotelContext['title_flatten'] = find('title').replace(" ", "");
 			hotelContext['path'] = page.path
 			hotelContext['special_tag'] = find('special_tag')
-			
+			hotelContext['address'] = find('address')
+			hotelContext['city'] = find('city')
+			hotelContext['description'] = find('description')
+			hotelContext['description1'] = find('description1')
+			hotelContext['description2'] = find('description2')
+			hotelContext['phone'] = find('phone')
+			hotelContext['email'] = find('email')
+			hotelContext['URL'] = find('URL')
+
 			HOTELS.append(hotelContext)
 
 			if hotelContext['title'] in FEATURED_HOTEL_NAMES:
@@ -71,7 +79,7 @@ def preBuild(site):
 
 			if hotelContext['title'] in CLASSIFIED_HOTEL_NAMES:
 				CLASSIFIED_HOTELS.append(hotelContext)
-			
+
 
 
 def preBuildPage(site, page, context, data):
@@ -83,10 +91,10 @@ def preBuildPage(site, page, context, data):
 	context['featured_hotels'] = FEATURED_HOTELS
 	context['featured_item'] = FEATURED_ITEM
 	context['classified_hotels'] = CLASSIFIED_HOTELS
-	
+
 	for hotel in HOTELS:
 		if hotel['path'] == page.path:
 			context.update(hotel)
 			context['this_hotel'] = hotel
-	
+
 	return context, data
